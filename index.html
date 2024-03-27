@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Quest</title>
+    <link href="qstyle.css" type=text/css rel="stylesheet">
+    
+</head>
+<body>
+   <div class="main">
+        <div class="header">
+            <h1> <center><u>Quiz Time</u></center></h1>
+            
+            <h2><!--Topic--> <strong>Section : General Knowledge</strong>  </h2>
+        </div>
+            <div class="body">
+            <div class="question">
+                <div class="question">1.Which is the largest coffee-producing state of India?<!--qns--></div>
+                 <!--Qns area-->
+            </div>
+            <div class="option">
+                <!--Option area-->
+                <label><input type="radio" name="q1" value="Kerala">Kerala<!--option1--> </label><br>
+                <label><input type="radio" name="q1" value="Tamil Nadu">Tamil Nadu<!--option2--></label><br>
+                <label><input type="radio" name="q1" value="Karnataka">Karnataka<!--option3--> </label><br>
+            </div>
+            <div class="question">
+                <div class="question">2. Which of the following is the capital of Arunachal Pradesh?<!--qns--></div>
+                <!--Qns area-->
+            </div>
+            <div class="option">
+               <!--Option area-->
+               <label><input type="radio" name="q1" value="Itanagar">Itanagar<!--option1--></label><br>
+               <label><input type="radio" name="q1" value="Dispur"> Dispur<!--option2--></label><br>
+               <label><input type="radio" name="q1" value="Imphal"> Imphal<!--option3--></label><br>
+            </div>
+            <div class="question">
+                <div class="question">3. What are the major languages spoken in Andhra Pradesh?<!--qns--></div>
+                <!--Qns area-->
+            </div>
+            <div class="option">
+                <!--Option area-->
+                <label><input type="radio" name="q1" value=" Odia and Telugu">  Odia and Telugu<!--option1--></label><br>
+                <label><input type="radio" name="q1" value="Telugu and Urdu"> Telugu and Urdu<!--option2--></label><br>
+                <label><input type="radio" name="q1" value="Telugu and Kannada"> Telugu and Kannada<!--option3--></label><br>
+                </div>
+            </div>
+            
+            
+        <button type="button" id="submit-button">Submit</button>
+   </div>
+   <script>
+    const quizForm = document.getElementById('quiz-form');
+    const submitButton = document.getElementById('submit-button');
+
+    submitButton.addEventListener('click', () => {
+      // You can handle the form submission and scoring here
+      // For simplicity, we'll just display an alert with selected answers
+      const answers = {
+        q1: document.querySelector('input[name="q1"]:checked').value,
+        q2: document.querySelector('input[name="q2"]:checked').value,
+      };
+
+      alert(JSON.stringify(answers, null, 2));
+    });
+  </script>
+</body>
+</html>
